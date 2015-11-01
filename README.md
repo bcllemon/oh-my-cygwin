@@ -6,7 +6,7 @@ bug fixed for cygwin_x86_64 2.871 on window 10
 # OH MY CYGWIN
 
 Looking for a real Terminal for Windows?
-Relax you just found it. This sets up a working ZSH Shell powered by [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) and the [apt-cyg](http://code.google.com/p/apt-cyg/) package manager.
+Relax you just found it. This sets up a working ZSH Shell powered by [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) and the [apt-cyg](https://github.com/bcllemon/apt-cyg) package manager.
 
 I took care of installing and configuring some packages so that you have vim, git and ssh just one keystroke away.
 
