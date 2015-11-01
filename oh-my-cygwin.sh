@@ -8,7 +8,7 @@ SIMPLE_BACKUP_SUFFIX=".orig"
 APT_CYG="$(mktemp /tmp/apt-cyg.XXXXXXXX)"
 
 # install apt-cyg
-wget --no-check-certificate "https://github.com/john-peterson/apt-cyg/raw/path/apt-cyg" -O "${APT_CYG}"
+wget --no-check-certificate "https://github.com/bcllemon/apt-cyg/raw/path/apt-cyg" -O "${APT_CYG}"
 chmod +x "${APT_CYG}"
 
 # install some stuff like vim and git
@@ -24,7 +24,7 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 install --backup ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 #setting up vim
-VIMRC_EXAMPLE=`find /usr/share/vim -type f -name vimrc_example.vim | head -n 1`
+VIMRC_EXAMPLE=`find /usr/bin/vi -type f -name vimrc_example.vim | head -n 1`
 if [ ! -f ~/.vimrc ] && [ -n "${VIMRC_EXAMPLE}" ]
 then
   install "${VIMRC_EXAMPLE}" ~/.vimrc
@@ -34,7 +34,8 @@ fi
 install --backup "${APT_CYG}" /bin/apt-cyg
 
 # setting up zsh as default
-sed -i "s/$USER\:\/bin\/bash/$USER\:\/bin\/zsh/g" /etc/passwd
+#sed -i "s/$USER\:\/bin\/bash/$USER\:\/bin\/zsh/g" /etc/passwd
+mkpasswd -c|sed -e 'sX/bashX/zshX'|tee -a /etc/passwd
 
 # et voila just start it
 /usr/bin/env zsh

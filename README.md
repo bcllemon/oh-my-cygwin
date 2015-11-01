@@ -1,3 +1,6 @@
+# fork from [oh-my-cygwin](https://github.com/haithembelhaj/oh-my-cygwin)
+# change
+bug fixed for cygwin_x86_64 2.871 on window 10
 # Warning: Deprecated
 
 # OH MY CYGWIN
@@ -9,9 +12,9 @@ I took care of installing and configuring some packages so that you have vim, gi
 
 # Setup
 
-Install [cygwin](http://www.cygwin.com/) with wget (check wget in the installation process) then start cygwin and execute 
+Install [cygwin](http://www.cygwin.com/) with wget (check wget in the installation process) then start cygwin and execute
 
-    wget --no-check-certificate https://raw.github.com/haithembelhaj/oh-my-cygwin/master/oh-my-cygwin.sh -O - | sh
+    wget --no-check-certificate https://raw.github.com/bcllemon/oh-my-cygwin/master/oh-my-cygwin.sh -O - | sh
 
 Et Voila!
 Your windows Terminal will look like this
